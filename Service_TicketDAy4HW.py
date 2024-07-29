@@ -1,13 +1,12 @@
+from Helper.py import next_id()
+
+
+
 service_tickets = {
     1: {"Customer": "Alice", "Issue": "Login problem", "Status": "open"},
     2: {"Customer": "Bob", "Issue": "Payment issue", "Status": "closed"},
 }
-def next_id():
-    last_id = 0
-    for id in service_tickets.keys():
-        if id > last_id:
-            last_id = id
-        return last_id + 1
+next_id()
 def new_ticket():
     new_id = next_id()
     while True:
@@ -42,6 +41,6 @@ Enter an option , please:
                 print("Ticket updated successfully.")
         elif ans == '3':
                 print(service_tickets)
-        elif ans == '4':
-                print("Fine then, just quit on me ")
+        elif ans == '4' :
+            print("Fine then, just quit on me ")
 main()
